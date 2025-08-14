@@ -1,3 +1,5 @@
+[![MSeeP.ai Security Assessment Badge](https://mseep.net/pr/azure-gpt-rag-mcp-badge.png)](https://mseep.ai/app/azure-gpt-rag-mcp)
+
 # GPT RAG Semantic Kernel Model Context Protocol Server
 
 Welcome to the GPT-RAG Model Context Protocol (MCP) Server for the GPT-RAG series of repos. Note these currently point at the `givenscj` fork due to some reorganizing of the repos. The original repos are available in the `azure` organization, but will not currenlty work with the MCP server.
