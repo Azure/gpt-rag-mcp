@@ -1,1 +1,0 @@
-{"table": "CustomerDemographics", "datasource": "sql-2dkxelm5py5us", "description": "CustomerDemographics", "columns": [{"name": "CustomerTypeID", "description": "CustomerTypeID"}, {"name": "CustomerDesc", "description": "CustomerDesc"}]}

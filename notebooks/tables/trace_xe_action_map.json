@@ -1,1 +1,0 @@
-{"table": "trace_xe_action_map", "datasource": "sql-2dkxelm5py5us", "description": "trace_xe_action_map", "columns": [{"name": "trace_column_id", "description": "trace_column_id"}, {"name": "package_name", "description": "package_name"}, {"name": "xe_action_name", "description": "xe_action_name"}]}
