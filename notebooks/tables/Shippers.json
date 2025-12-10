@@ -1,1 +1,0 @@
-{"table": "Shippers", "datasource": "sql-2dkxelm5py5us", "description": "Shippers", "columns": [{"name": "ShipperID", "description": "ShipperID"}, {"name": "CompanyName", "description": "CompanyName"}, {"name": "Phone", "description": "Phone"}]}

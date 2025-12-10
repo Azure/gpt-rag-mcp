@@ -1,1 +1,0 @@
-{"table": "Order Details", "datasource": "sql-2dkxelm5py5us", "description": "Order Details", "columns": [{"name": "OrderID", "description": "OrderID"}, {"name": "ProductID", "description": "ProductID"}, {"name": "UnitPrice", "description": "UnitPrice"}, {"name": "Quantity", "description": "Quantity"}, {"name": "Discount", "description": "Discount"}]}

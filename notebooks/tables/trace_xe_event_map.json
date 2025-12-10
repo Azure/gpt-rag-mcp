@@ -1,1 +1,0 @@
-{"table": "trace_xe_event_map", "datasource": "sql-2dkxelm5py5us", "description": "trace_xe_event_map", "columns": [{"name": "trace_event_id", "description": "trace_event_id"}, {"name": "package_name", "description": "package_name"}, {"name": "xe_event_name", "description": "xe_event_name"}]}

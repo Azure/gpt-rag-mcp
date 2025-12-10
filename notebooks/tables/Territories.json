@@ -1,1 +1,0 @@
-{"table": "Territories", "datasource": "sql-2dkxelm5py5us", "description": "Territories", "columns": [{"name": "TerritoryID", "description": "TerritoryID"}, {"name": "TerritoryDescription", "description": "TerritoryDescription"}, {"name": "RegionID", "description": "RegionID"}]}
