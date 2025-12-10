@@ -1,3 +1,5 @@
+[![MSeeP.ai Security Assessment Badge](https://mseep.net/pr/azure-gpt-rag-mcp-badge.png)](https://mseep.ai/app/azure-gpt-rag-mcp)
+
 # GPT RAG Semantic Kernel Model Context Protocol Server
 Part of [GPT‑RAG](https://aka.ms/gpt-rag)
 
