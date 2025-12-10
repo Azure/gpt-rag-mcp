@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: FastAPI (Uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "server:app",
+        "--host", "0.0.0.0",
+        "--port", "9000",
+        "--reload"
+      ],
+      "cwd": "${workspaceFolder}/src",
+      "env": {
+        "APP_CONFIG_ENDPOINT": "https://appcs-6ssazw6syq75i.azconfig.io"
+      },
+      "jinja": true,
+      "justMyCode": true
+    }
+  ]
+}
