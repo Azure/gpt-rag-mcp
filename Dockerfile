@@ -29,9 +29,9 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
 # Container Apps / general containers expect listening on 0.0.0.0:<port>
-EXPOSE 80
+EXPOSE 8080
 
 ENV PYTHONPATH="/app/src"
 
 # Run the MCP server using uv so it uses the synced environment.
-CMD ["uv", "run", "uvicorn", "src.server:app", "--host", "0.0.0.0", "--port", "80", "--log-level", "info"]
+CMD ["uv", "run", "uvicorn", "src.server:app", "--host", "0.0.0.0", "--port", "8080", "--log-level", "info"]

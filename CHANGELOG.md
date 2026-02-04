@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.  
 This format follows [Keep a Changelog](https://keepachangelog.com/) and adheres to [Semantic Versioning](https://semver.org/).
 
+## [v0.3.5] - 2026-02-04
+### Fixed
+- Fixed Docker builds on ARM-based machines by explicitly setting the target platform to `linux/amd64`, preventing Azure Container Apps deployment failures.
+### Changed
+- Standardized on the container best practice of using a non-privileged port (`8080`) instead of a privileged port (`80`), reducing the risk of runtime/permission friction and improving stability of long-running ingestion workloads.
+
+## [v0.3.4] - 2025-12-10
+### Changed
+- Major updated simplifying gpt-rag MCP
+
 ## [v0.2.3] - 2025-08-31
 ### Changed
 - Removed certain default tool configurations that were resulting in excessively long docker builds
