@@ -200,7 +200,7 @@ $fullImageName = "$($values.CONTAINER_REGISTRY_LOGIN_SERVER)/azure-gpt-rag/mcp:$
 Write-Green "🛠️  Building Docker image…"
 if (Get-Command docker -ErrorAction SilentlyContinue) {
     try {
-        docker build -t $fullImageName .
+        docker build --platform linux/amd64 -t $fullImageName .
         Write-Green "✅ Docker build succeeded."
     } catch {
         $errMsg = $_.Exception.Message
