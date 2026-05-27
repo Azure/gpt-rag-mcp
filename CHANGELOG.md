@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.  
 This format follows [Keep a Changelog](https://keepachangelog.com/) and adheres to [Semantic Versioning](https://semver.org/).
 
+## [v0.3.6] - 2026-05-27
+### Fixed
+- **Bash deploy image platform:** Added `--platform linux/amd64` to `scripts/deploy.sh` Docker builds so Apple Silicon hosts produce Azure Container Apps-compatible images. Fixes [Azure/GPT-RAG#464](https://github.com/Azure/GPT-RAG/issues/464).
+
+### Changed
+- **MCP runtime wording:** Clarified the README that this service is a Python FastMCP/Starlette MCP server consumed through GPT-RAG's `mcp` strategy, avoiding legacy Semantic Kernel or AutoGen variant confusion. Closes [Azure/GPT-RAG#463](https://github.com/Azure/GPT-RAG/issues/463).
+
 ## [v0.3.5] - 2026-02-04
 ### Fixed
 - Fixed Docker builds on ARM-based machines by explicitly setting the target platform to `linux/amd64`, preventing Azure Container Apps deployment failures.

@@ -1,7 +1,7 @@
-# GPT RAG Semantic Kernel Model Context Protocol Server
+# GPT RAG Model Context Protocol Server
 Part of [GPT‑RAG](https://aka.ms/gpt-rag)
 
-The GPT-RAG MCP service deploys an MCP server that is used to enable agentic features in AI Chat Applications. Documentation on the Model Context Protocol can be found here: [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+The GPT-RAG MCP service deploys a Python MCP server built with FastMCP and Starlette. It is consumed by GPT-RAG through the orchestrator `mcp` strategy and is not tied to an AutoGen-specific runtime. Documentation on the Model Context Protocol can be found here: [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
 
 ## Prerequisites
 
