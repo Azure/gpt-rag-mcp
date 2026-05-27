@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+- **Dependency refresh:** Updated transitive runtime dependencies in `uv.lock`, including `urllib3`, `pygments`, `cryptography`, `idna`, `python-dotenv`, `python-multipart`, and `requests`.
+
 All notable changes to this project will be documented in this file.  
 This format follows [Keep a Changelog](https://keepachangelog.com/) and adheres to [Semantic Versioning](https://semver.org/).
 
