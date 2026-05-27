@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [v0.3.7] - 2026-05-27
 
 ### Changed
 - **Dependency refresh:** Updated transitive runtime dependencies in `uv.lock`, including `urllib3`, `pygments`, `cryptography`, `idna`, `python-dotenv`, `python-multipart`, and `requests`.

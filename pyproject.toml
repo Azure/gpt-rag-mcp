@@ -1,6 +1,6 @@
 [project]
 name = "mcp-server"
-version = "0.3.6"
+version = "0.3.7"
 description = "GPT-RAG MCP Server"
 readme = "README.md"
 requires-python = ">=3.12"
