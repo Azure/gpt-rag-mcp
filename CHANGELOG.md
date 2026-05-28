@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [v0.3.8] - 2026-05-27
 
 ### Changed
 - **Dependency refresh:** Updated the MCP SDK requirement to 1.23.0 and refreshed `uv.lock` with `PyJWT` 2.12.0.
