@@ -1,11 +1,11 @@
 [project]
 name = "mcp-server"
-version = "0.3.7"
+version = "0.3.8"
 description = "GPT-RAG MCP Server"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.121.1",
-    "mcp[cli]>=1.21.0",
+    "mcp[cli]>=1.23.0",
     "wikipedia>=1.4.0",
 ]
