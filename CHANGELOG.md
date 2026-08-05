@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+### Added
+- **Reusable release skill:** Added repository-local release guidance for authoritative version discovery, SemVer preparation, validation, sanitized release notes, publication approval gates, and safe reconciliation.
 
 ## [v0.3.8] - 2026-05-27
 
