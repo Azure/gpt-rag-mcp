@@ -5,7 +5,7 @@ description = "GPT-RAG MCP Server"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.141.1",
+    "fastapi>=0.142.2",
     "mcp[cli]>=2.1.1",
     "wikipedia>=1.4.0",
 ]
