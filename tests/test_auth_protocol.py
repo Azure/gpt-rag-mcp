@@ -176,3 +176,20 @@ async def test_official_sdk_client_and_server_locally(settings, signing):
                     assert len(tools.tools) == 2
                     result = await session.call_tool("nl2sql.list_sources", {})
                     assert result.structured_content == {"schema_version": 1, "sources": []}
+
+
+def test_oauth_metadata_uses_parent_endpoint(settings, signing):
+    from tools.nl2sql.config import Settings
+
+    configured = Settings.model_validate(
+        settings.model_dump() | {"MCP_SERVER_URL": "https://synthetic-mcp.example.com/mcp"}
+    )
+    with TestClient(create_app(AsyncMock(), configured, signing.verifier)) as client:
+        document = client.get("/.well-known/oauth-protected-resource/mcp").json()
+        assert document["resource"] == "https://synthetic-mcp.example.com/mcp"
+        assert (
+            client.post(
+                "/mcp", json={"jsonrpc": "2.0", "id": 1, "method": "tools/list"}
+            ).status_code
+            == 401
+        )

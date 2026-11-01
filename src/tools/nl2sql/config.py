@@ -36,6 +36,16 @@ class Settings(BaseModel):
             url = getattr(self, name)
             if url and (url.scheme != "https" or url.username or url.password):
                 raise ValueError("Provider endpoints require HTTPS without credentials")
+        url = self.MCP_SERVER_URL
+        if url and (
+            url.scheme != "https"
+            or url.username
+            or url.password
+            or url.query
+            or url.fragment
+            or url.path != "/mcp"
+        ):
+            raise ValueError("MCP_SERVER_URL must be the public HTTPS /mcp endpoint")
 
         if any(not re.fullmatch(r"[A-Za-z0-9-]{1,127}", n) for n in self.MCP_SQL_SECRET_NAMES):
             raise ValueError("SQL secret names must be Key Vault reference names")

@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Fixed
+- Scope MCP deployment to `AZURE_APP_RESOURCE_GROUP` and bind ACR operations to
+  `CONTAINER_REGISTRY_RESOURCE_ID`, independently of the Foundry resource group.
+- Discover the deployed MCP app identity; set its UAI client ID or clear stale
+  `AZURE_CLIENT_ID` for system-only apps. Set ingress target port to 8080.
+- Validate parent-published HTTPS `MCP_SERVER_URL` for OAuth resource metadata.
+- Replace private-mirror lock URLs with hash/size-verified official PyPI URLs,
+  without changing locked versions or dependency edges.
+
 ### Added
 - **Reusable release skill:** Added repository-local release guidance for authoritative version discovery, SemVer preparation, validation, sanitized release notes, publication approval gates, and safe reconciliation.
 

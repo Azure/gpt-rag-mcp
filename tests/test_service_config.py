@@ -63,9 +63,19 @@ def test_empty_allowed_clients_valid_and_limits_fail_closed(settings):
         ("MCP_AUTH_RESOURCE_SCOPE", "api://other/.default"),
         ("MCP_COSMOS_ENDPOINT", "http://example.com"),
         ("MCP_SQL_SECRET_NAMES", ["secret/invalid"]),
+        ("MCP_SERVER_URL", "http://example.com/mcp"),
+        ("MCP_SERVER_URL", "https://example.com/other"),
+        ("MCP_SERVER_URL", "https://example.com/mcp?access=unexpected"),
     ):
         with pytest.raises(ValidationError):
             Settings.model_validate(settings.model_dump() | {field: value})
+
+
+def test_parent_published_mcp_endpoint(settings):
+    configured = Settings.model_validate(
+        settings.model_dump() | {"MCP_SERVER_URL": "https://synthetic-mcp.example.com/mcp"}
+    )
+    assert configured.resource_url == "https://synthetic-mcp.example.com/mcp"
 
 
 async def test_app_configuration_label_and_json_arrays(settings, monkeypatch):
