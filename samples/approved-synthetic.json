@@ -1,0 +1,43 @@
+{
+  "source": {
+    "id": "synthetic",
+    "source_id": "synthetic",
+    "name": "Synthetic catalog",
+    "description": "Operator-reviewed schema example only; no business rows.",
+    "enabled": true,
+    "metadata_version": "catalog-v1",
+    "sql_server": "approved-sql.database.windows.net",
+    "sql_database": "Synthetic",
+    "allowed_objects": ["dbo.Products", "dbo.Categories"],
+    "authentication": "managed_identity"
+  },
+  "records": [
+    {
+      "id": "products",
+      "source_id": "synthetic",
+      "metadata_version": "catalog-v1",
+      "kind": "schema",
+      "object_name": "dbo.Products",
+      "related_objects": ["dbo.Categories"],
+      "content": "dbo.Products(ProductId int primary key, CategoryId int foreign key references dbo.Categories(CategoryId), Name nvarchar(100))."
+    },
+    {
+      "id": "categories",
+      "source_id": "synthetic",
+      "metadata_version": "catalog-v1",
+      "kind": "schema",
+      "object_name": "dbo.Categories",
+      "related_objects": ["dbo.Products"],
+      "content": "dbo.Categories(CategoryId int primary key, Name nvarchar(100)). Join Products.CategoryId = Categories.CategoryId."
+    },
+    {
+      "id": "count-example",
+      "source_id": "synthetic",
+      "metadata_version": "catalog-v1",
+      "kind": "example",
+      "object_name": "dbo.Products",
+      "related_objects": ["dbo.Categories"],
+      "content": "Question: count products per category. SQL: SELECT TOP (1000) c.Name, COUNT(*) AS ProductCount FROM dbo.Categories AS c JOIN dbo.Products AS p ON p.CategoryId=c.CategoryId GROUP BY c.Name."
+    }
+  ]
+}

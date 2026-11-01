@@ -67,3 +67,18 @@ This format follows [Keep a Changelog](https://keepachangelog.com/) and adheres 
 - The first version of the GPT RAG MCP was created.
 - Added support for Stdio, FastAPI, and SSE.
 - Included initial set of tools.
+# Unreleased — 1.0.0 candidate
+
+### Changed
+- Replace the demo with NL2SQL-only official MCPServer 2.3.0, stateless `/mcp`,
+  Entra application authorization and typed bounded read-only SQL results.
+- Use `agent-lz` managed-identity App Configuration, Cosmos vector metadata and
+  existing platform generation/embedding models. No Search or agent framework.
+- Deploy only to existing Container Apps using immutable image digests.
+
+### Added
+- Administrative approved-schema/example importer with staged metadata versions
+  and conditional activation; partial staging never changes the active source.
+- Focused local security, protocol, provider and deployment tests.
+
+No tag or release is published for this candidate.
