@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Fixed
+- Scope MCP deployment to `AZURE_APP_RESOURCE_GROUP` and bind ACR operations to
+  `CONTAINER_REGISTRY_RESOURCE_ID`, independently of the Foundry resource group.
+- Discover the deployed MCP app identity; set its UAI client ID or clear stale
+  `AZURE_CLIENT_ID` for system-only apps. Set ingress target port to 8080.
+- Validate parent-published HTTPS `MCP_SERVER_URL` for OAuth resource metadata.
+- Replace private-mirror lock URLs with hash/size-verified official PyPI URLs,
+  without changing locked versions or dependency edges.
+
 ### Added
 - **Reusable release skill:** Added repository-local release guidance for authoritative version discovery, SemVer preparation, validation, sanitized release notes, publication approval gates, and safe reconciliation.
 
@@ -67,3 +76,18 @@ This format follows [Keep a Changelog](https://keepachangelog.com/) and adheres 
 - The first version of the GPT RAG MCP was created.
 - Added support for Stdio, FastAPI, and SSE.
 - Included initial set of tools.
+# Unreleased — 1.0.0 candidate
+
+### Changed
+- Replace the demo with NL2SQL-only official MCPServer 2.3.0, stateless `/mcp`,
+  Entra application authorization and typed bounded read-only SQL results.
+- Use `agent-lz` managed-identity App Configuration, Cosmos vector metadata and
+  existing platform generation/embedding models. No Search or agent framework.
+- Deploy only to existing Container Apps using immutable image digests.
+
+### Added
+- Administrative approved-schema/example importer with staged metadata versions
+  and conditional activation; partial staging never changes the active source.
+- Focused local security, protocol, provider and deployment tests.
+
+No tag or release is published for this candidate.

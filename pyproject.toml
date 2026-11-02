@@ -1,11 +1,30 @@
 [project]
-name = "mcp-server"
-version = "0.3.8"
-description = "GPT-RAG MCP Server"
+name = "agent-app-mcp"
+version = "1.0.0"
+description = "NL2SQL-only MCP component for AI Landing Zones"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.141.1",
-    "mcp[cli]>=2.1.1",
-    "wikipedia>=1.4.0",
+    "mcp==2.3.0",
+    "azure-appconfiguration==1.7.2",
+    "azure-identity==1.25.1",
+    "azure-cosmos==4.14.0",
+    "azure-keyvault-secrets==4.10.0",
+    "aiohttp==3.13.3",
+    "openai==2.8.0",
+    "pyodbc==5.3.0",
+    "sqlparse==0.5.5",
+    "sqlglot==28.0.0",
+    "uvicorn==0.38.0",
 ]
+
+[dependency-groups]
+dev = ["pytest==9.0.0", "pytest-asyncio==1.3.0", "httpx==0.28.1", "ruff==0.14.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

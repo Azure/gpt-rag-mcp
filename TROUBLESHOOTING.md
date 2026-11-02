@@ -1,3 +1,2 @@
-# Troubleshooting  
-
-We will post helpful troubleshooting tips here.  Keep an eye out for changes from us or you!
+Product troubleshooting is maintained in [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones).
+Report vulnerabilities using [SECURITY.md](SECURITY.md), never public issues.

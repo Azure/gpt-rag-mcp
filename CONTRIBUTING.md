@@ -20,6 +20,15 @@ Follow these guidelines to ensure smooth integration and maintain the quality of
 
 - **Multi-Repo Dependencies:** If your pull request has dependencies on updates in other repositories, make sure to mention this in the pull request description. Additionally, create a corresponding pull request in the other repository to ensure synchronized updates across all related projects.
 
+## Container Build Verification
+
+The **Verify container build** pull-request check builds the committed
+`Dockerfile` once on an isolated Ubuntu runner, with a two-minute build timeout.
+It preserves the frozen production dependency install and normal TLS
+verification. The image stays local to the runner: the check does not publish
+or upload images, deploy to Azure, or make live model or SQL calls. New commits
+automatically replace obsolete runs; no manual dispatch is needed.
+
 ## Code Update Workflow
 
 We use a simplified version of the [Fork and Branch Workflow](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/) alongside [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/). The `release` branches always contains deployment-ready code, while the `main` branch serves as our integration branch.
